@@ -5,26 +5,11 @@
 body, html {
   height: 100%;
   margin: 0px;
-  font-size: 14px;
 }
 
 .navbar {
     width: 100%;
-    height: 80px;
     opacity: 0.93;
-}
-
-.navbar a {
-    float: left;
-    display: block;
-    color: blue;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-.navbar-nav > li {
-    float: left;
 }
 
 .wallpaper-height {
@@ -46,23 +31,302 @@ body, html {
 }
 
 .core-message {
-    color:#fff;
-    text-align:center;
-    width:700px;
-    max-width:100%;
-    margin:0 auto;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
 }
 
-.alignment {
-    width:100%;
-    left:0;
-    -webkit-transform:translateY(-50%);
-    -ms-transform:translateY(-50%);
-    -o-transform:translateY(-50%);
-    transform:translateY(-50%);
-    top:55%;
+/* Bootstrap 4 doesn't have extra small buttons, I have to make my own
+.btn-xs {
+   @include button-size(40px, 143px, 14px, 1.4, 3px);
+}
+*/
+
+.btn-primary {
+    background-color: #337ab7 !important;
 }
 
-ul {
-    list-style-type: none;
+#for-companies {
+    padding: 0 0 !important;
+}
+
+.fix-navbar {
+    flex: 1;
+}
+
+.navbar-right {
+    margin-left: auto !important;
+    margin-right: 10px;
+}
+
+li a:not(#companies-link) {
+    line-height: 60px;
+}
+
+nav .navbar-nav > li > a {
+    font-size: 13px;
+    line-height: 35px;
+    text-transform: uppercase;
+    color: #1c75bc;
+    padding: 33px 0 31px;
+    margin: 0 18px;
+    font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    -webkit-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
+}
+
+nav .navbar-nav > li.btn > a {
+    color: #fff;
+    padding: 12px 4px 10px;
+    position: relative;
+    float: right;
+    margin: 0 15px;
+}
+
+li a:hover {
+    text-decoration: none;
+    filter: brightness(75%);
+}
+
+.front-header {
+    font-size: 82px;
+    font-weight: 900 !important;
+    font-family: Raleway,Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+    line-height: 82px;
+    letter-spacing: 2px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    max-width: 800px;
+    padding-top: calc(44vh - 82px);
+    margin: 0 auto;
+}
+
+.next-text {
+    padding-left: 50px;
+}
+
+.find-jobs {
+    margin: 50px 0;
+    text-align: center;
+}
+
+.find-jobs .btn {
+    font-size: 16px;
+    line-height: 32px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 36px;
+    border: 0;
+    padding: 18px 50px;
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #04d092 !important;
+    border-color: #04d092;
+}
+
+.btn img {
+    height: 16px;
+    vertical-align: middle;
+    margin-right: 12px;
+}
+
+.tagline {
+    font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-size: 20px;
+    line-height: 32px;
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.navbar-header {
+    flex: 1;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.navbar-header .navbar-right a {
+    padding: 28px 10px;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: Raleway,Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+    vertical-align: middle;
+}
+
+.fix-img {
+    margin-left: 30px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.fix-img img {
+    padding-top: 6px;
+}
+
+.pull-right {
+    padding-top: 18px;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+#fixed-button {
+    position: fixed;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: white;
+    right: 25px;
+    bottom: 25px;
+    z-index: 1045;
+    cursor: pointer;
+    box-shadow: 0 1px 6px rgba(8,57,96,.06),0 2px 32px rgba(8,57,96,.16);
+}
+
+.line {
+    width: 22px;
+    height: 3px;
+    border-radius: 10px;
+    background-color: #04d092;
+    margin-bottom: 5px;
+    position: relative;
+    left: 18px;
+    top: 19px;
+}
+
+.sidebar-overlay {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    z-index: 1043;
+    opacity: 0.8;
+}
+
+.sidebar {
+    position: fixed;
+    right: 0;
+    width: 85%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 1044;
+    text-transform: uppercase;
+    animation: slideIn 0.4s ease 1 alternate;
+}
+
+@keyframes slideIn {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 85%;
+    }
+}
+
+#sidebarId {
+    display: none !important;
+}
+
+.sidebar-header {
+    padding: 24px;
+    font-size: 14px;
+}
+
+.pull-left {
+    float: left !important;
+}
+
+.text-green {
+    color: #26b999 !important;
+}
+
+.sidebar-header-right {
+    float: right !important;
+    text-decoration: none;
+    color: #1c75bc !important;
+}
+
+.sidebar-header-right a {
+    padding-left: 20px;
+}
+
+.list-group {
+    margin-top: 60px;
+}
+
+.list-group-item {
+    padding: 0 !important;
+    border-left-width: 0px;
+    border-right-width: 0px;
+}
+
+.list-group-item a {
+    display: block;
+    color: #666 !important;
+    padding-left: 20px;
+    font-weight: 600;
+    font-size: 13px;
+    font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+.list-group-item a:hover {
+    background-color: #04d092;
+    color: #fff;
+}
+
+@media only screen and (max-width:974px){
+    .front-header {
+        font-size: 72px;
+        line-height: 64px;
+    }
+
+    .find-jobs {
+        margin: 35px 0;
+    }
+
+    .find-jobs .btn {
+        font-size: 14px;
+        padding: 14px 48px;
+    }
+
+    .tagline {
+        font-size: 18px;
+        line-height: 24px;
+        padding: 0 15px;
+    }
+}
+
+@media only screen and (max-width:748px){
+    .front-header {
+        font-size: 54px;
+        line-height: 48px;
+    }
+
+    .find-jobs {
+        margin: 35px 0;
+    }
+
+    .find-jobs .btn {
+        font-size: 14px;
+        padding: 14px 48px;
+    }
+
+    .tagline {
+        font-size: 14px;
+        line-height: 20px;
+        max-width: 360px;
+    }
+}
+
+@media only screen and (max-width:500px){
+    .next-text {
+        padding-left: 0;
+    }
 }
